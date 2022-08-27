@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Silkscreen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242424;
+    color: antiqueWhite;
+}
+
+
+header{
+    background-color: orange;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.6vw;
+    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'silkscreen', cursive; */
+}
+
+header li{
+    list-style: none;
+    cursor: pointer;
+
+}
+
+.gameContainer{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    font-family: 'silkscreen';
+    justify-content: space-evenly;
+
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+.line{
+    color: red;
+    background-color: orange;
+    height: 3px;
+    /* width: 300px; */
+    /* transition: width 1s ease-in-out; */
+    position: absolute;
+}
+
+.box{
+    border: 2px solid white;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: orange;
+}
+
+.gameInfo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.gameInfo h1{
+    font-size: 40px;
+}
+
+.control{
+    font-size: 30px;
+}
+
+#reset{
+    background-color: orange;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'silkscreen';
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Utility classes */
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+
+@media screen and (max-width:1000px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
